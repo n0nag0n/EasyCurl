@@ -1,0 +1,21 @@
+{
+    "name": "n0nag0n/easy-curl",
+    "description": "A simple wrapper library to make it easy to work with cURL (and to stop you from googling all the curl_setopt() you need)",
+    "type": "library",
+    "require": {
+        "lib-curl": "^7.54"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Austin Collier",
+            "email": "austin@sky-9.com"
+        }
+	],
+	"autoload": {
+		"psr-4" : {
+			"n0nag0n\\" : "src"
+		}
+	},
+	"version": "0.0.1"
+}
