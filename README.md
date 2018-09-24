@@ -3,7 +3,7 @@ This is a super simple library to interact with curl.
 Install with composer cause that's what all the cool kids use these days.
 
 ```php
-composer install n0nag0n/easy-curl
+composer require n0nag0n/easy-curl
 ```
 
 Basic Usage
