@@ -4,7 +4,6 @@
 	"type": "library",
 	"keywords": ["curl","libcurl","lib-curl","easy","simple","tiny","mini"],
     "require": {
-		"lib-curl": "^7.54",
 		"php": ">=5.4.0",
 		"ext-curl": "*"
     },
