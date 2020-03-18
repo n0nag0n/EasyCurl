@@ -40,9 +40,9 @@
 			if(isset($data['params']) && $data['params']) {
 				$data['params'] = http_build_query($data['params']);
 			}
-		    $curl = curl_init($url);
-		    curl_setopt($curl, CURLOPT_HEADER, 0);
-		    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			$curl = curl_init($url);
+			curl_setopt($curl, CURLOPT_HEADER, 0);
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $data['method']);
 			curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 5);
 
@@ -92,7 +92,7 @@
 				curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
 			}
 
-		    $response = curl_exec($curl);
+			$response = curl_exec($curl);
 			
 			self::$last_request_info = curl_getinfo($curl);
 			$curl_error = curl_error($curl);
@@ -101,8 +101,8 @@
 			if($curl_errno)
 				throw new \Exception('cURL Error: "'.$curl_errno.' - '.$curl_error.'" cURL Info: '.print_r(curl_getinfo($curl), true));
 
-		    curl_close($curl);
+			curl_close($curl);
 			
-		    return $response;
+			return $response;
 		}
 	}
