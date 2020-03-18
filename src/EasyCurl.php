@@ -46,7 +46,7 @@
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $data['method']);
 			curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 5);
 
-			if($data['time_out']) {
+			if(isset($data['time_out']) && $data['time_out']) {
 				curl_setopt($curl, CURLOPT_TIMEOUT, $data['time_out']);
 			} else {
 				curl_setopt($curl, CURLOPT_TIMEOUT, 12);
