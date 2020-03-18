@@ -79,7 +79,9 @@
 			if(strtoupper($data['method']) === 'POST' || strtoupper($data['method']) === 'PUT') {
 				curl_setopt($curl, CURLOPT_POST, 1);
 				// params_array_raw is when things should not be passed through http_build_query like CURLFile
-				$postfields = isset($data['params_array_raw']) && is_array($data['params_array_raw']) && count($data['params_array_raw']) ? $data['params_array_raw'] : $data['params'].$data['post_body'];
+				$params = $data['params'] ?? '';
+				$post_body = $data['post_body'] ?? '';
+				$postfields = isset($data['params_array_raw']) && is_array($data['params_array_raw']) && count($data['params_array_raw']) ? $data['params_array_raw'] : $params.$post_body;
 				curl_setopt($curl, CURLOPT_POSTFIELDS, $postfields);
 			}
 
