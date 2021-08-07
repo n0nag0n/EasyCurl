@@ -73,7 +73,7 @@
 			}
 
 			if(isset($data['custom_headers']) && is_array($data['custom_headers']) && count($data['custom_headers'])) {
-				$headers[] = array_merge($headers, $data['custom_headers']);
+				$headers = array_merge($headers, $data['custom_headers']);
 			}
 
 			if(strtoupper($data['method']) === 'POST' || strtoupper($data['method']) === 'PUT') {
